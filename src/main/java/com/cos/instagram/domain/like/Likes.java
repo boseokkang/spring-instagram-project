@@ -1,4 +1,4 @@
-package com.cos.instagram.domain.follow;
+package com.cos.instagram.domain.like;
 
 import java.sql.Timestamp;
 
@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.cos.instagram.domain.image.Image;
 import com.cos.instagram.domain.user.User;
 
 import lombok.AllArgsConstructor;
@@ -23,19 +24,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Follow {
+public class Likes {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@ManyToOne
-	@JoinColumn(name = "fromUserId")
-	private User fromUser; // fromUser로부터
+	@JoinColumn(name = "userId")
+	private User user;
 
 	@ManyToOne
-	@JoinColumn(name = "toUserId")
-	private User toUser; // toUser로 팔로우하겠다.
+	@JoinColumn(name = "imageId")
+	private Image image;
 
 	@CreationTimestamp
 	private Timestamp createDate;
