@@ -39,6 +39,6 @@ public class AuthController {
 	public String join(JoinReqDto joinReqDto) { // form은 스프링에서 기본적인 파싱이 가능함. (@RequestBody 안걸어도 됨)
 		log.info(joinReqDto.toString());
 		userService.회원가입(joinReqDto); // DataBase Connection 켜져있음
-		return "redirect:/auth/loginForm"; // 인스타그램 메인 페이지
+		return "redirect:/auth/loginForm"; // 인스타그램 로그인 페이지
 	}
 }
