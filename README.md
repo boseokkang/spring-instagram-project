@@ -82,7 +82,7 @@ spring:
       password: 1234
 
 cos: # like 변수, 자바에서 찾기 쉽게 커스텀
-  secret: 홍차
+  secret: 라떼
 
 file: # 파일 저장시 경로
   path: C:/src/aouthwork/instagram/src/main/resources/upload/
